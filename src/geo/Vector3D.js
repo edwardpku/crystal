@@ -5,7 +5,9 @@
  * 
  */
 
-(function() {
+window.crystal = window.crystal || {};
+
+(function(crystal) {
     function Vector3D(x, y, z, w) {
         this.x = x || 0;
         this.y = y || 0;
@@ -85,5 +87,7 @@
     Vector3D.angleBetween = function(a, b) {
     	
     };
-})();
+    
+    crystal.Vector3D = Vector3D;
+})(crystal);
 
