@@ -1,4 +1,4 @@
-Crystal.js
+crystal.js
 =========
 A Javascript 3D Library.
 
