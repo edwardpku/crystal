@@ -4,7 +4,10 @@
  * @see flash.geo.Point of Actionscript 3, Adobe
  * 
  */
-(function() {
+ 
+window.crystal = window.crystal || {};
+
+(function(crystal) {
     function Point(x, y) {
         if (this instanceof Point) {
             if (arguments.length == 2) {
@@ -84,6 +87,6 @@
         }
     };
 
-    G.Point = Point;
-})();
+    crystal.Point = Point;
+})(crystal);
 
