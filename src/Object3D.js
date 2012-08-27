@@ -56,5 +56,4 @@ window.crystal = window.crystal || {};
 	};
 
 	crystal.Object3D = Object3D;
-
 })(crystal);
