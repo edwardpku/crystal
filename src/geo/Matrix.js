@@ -4,8 +4,10 @@
  * @see flash.geo.Matrix of Actionscript 3, Adobe
  * 
  */
+ 
+window.crystal = window.crystal || {};
 
-(function() {
+(function(crystal) {
     function Matrix(a, b, c, d, tx, ty) {
 	this.a = a;
 	this.b = b;
@@ -36,5 +38,7 @@
     Matrix.prototype.transformPoint = function(p) {
         return new Point(this.a * p.x + this.b * p.y + this.tx, this.c * p.x + this.d * p.y + this.ty);
     };
-})();
+    
+    crystal.Matrix = Matrix;
+})(crystal);
 
