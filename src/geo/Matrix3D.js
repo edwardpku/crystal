@@ -31,14 +31,15 @@ window.crystal = window.crystal || {};
     // m: Array
     Matrix.prototype.equal = function(m) {
     	for (var i = 0; i < 16; i ++) {
-    		if (Math.abs(this.v[i] - m.v[i]) >= EPSILON) {
-    			return false;
-    		}
+            if (Math.abs(this.v[i] - m.v[i]) >= EPSILON) {
+    	        return false;
+    	    }
     	}
     	
     	return true;
     };
     
+    // return the determinant of the matrix
     Matrix3D.prototype.determinant = function() {
     	var a00 = this.v[0], a01 = this.v[1], a02 = this.v[2], a03 = this.v[3],
             a10 = this.v[4], a11 = this.v[5], a12 = this.v[6], a13 = this.v[7],
@@ -79,6 +80,7 @@ window.crystal = window.crystal || {};
     	this.v[14] = a23;
     };
     
+    // m: Matrix3D
     Matrix3D.prototype.append = function(m) {
     	var a00 = m.v[0], a01 = m.v[1], a02 = m.v[2], a03 = m.v[3];
         var a10 = m.v[4], a11 = m.v[5], a12 = m.v[6], a13 = m.v[7];
