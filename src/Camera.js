@@ -37,5 +37,4 @@ window.crystal = window.crystal || {};
 	};
 
 	crystal.Camera = Camera;
-
 })(crystal)
