@@ -1,6 +1,6 @@
 /**
  * @author: kexin
- * @date: 12-8-10
+ * @date: 2012.8.10
  * @see flash.geo.Vector3D of Actionscript 3, Adobe
  * 
  */
