@@ -1,9 +1,8 @@
 /**
- * Author: kexin
- * Date: 12-8-7
- * Time: 下午8:00
- * 
+ * @author: kexin
+ * @date: 2012.8.7
  * @see flash.geo.Point of Actionscript 3, Adobe
+ * 
  */
 (function() {
     function Point(x, y) {
