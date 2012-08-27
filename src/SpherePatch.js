@@ -20,5 +20,6 @@ window.crystal = window.crystal || {};
 	SpherePatch.prototype.build = function() {
 		
 	};
-
+    
+    crystal.SpherePatch = SpherePatch;
 })(crystal);
