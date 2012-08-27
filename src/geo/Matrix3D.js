@@ -4,7 +4,9 @@
  * @see flash.geo.Matrix3D of Actionscript 3, Adobe
  */
 
-(function() {
+window.crystal = window.crystal || {};
+
+(function(crystal) {
     var EPSILON = 0.01;	
 	
     function Matrix3D(v) {
@@ -195,6 +197,6 @@
 
     };
     
-    
-})();
+    crystal.Matrix3D = Matrix3D;
+})(crystal);
 
