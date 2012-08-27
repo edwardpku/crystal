@@ -1,9 +1,8 @@
 /**
- * Author: kexin
- * Date: 12-8-10
- * Time: 下午14:00
- * 
+ * @author: kexin
+ * @date: 12-8-10
  * @see flash.geo.Vector3D of Actionscript 3, Adobe
+ * 
  */
 
 (function() {
