@@ -1,0 +1,31 @@
+body {
+    padding: 0 200px;
+    margin: 0;
+}
+
+#sketchpad {
+    border: 1px solid #000;
+    background: #000;
+}
+
+#nav {
+    float:left;
+    width:200px;
+}
+
+#content {
+    float:right;
+    width:600px;
+}
+
+ul {
+    list-style: none;
+    border-bottom:1px solid #aaa;
+    padding: 0;
+}
+li {
+    border:1px solid #aaa;
+    border-bottom: 0;
+    padding:5px 10px;
+    cursor:pointer;
+}
