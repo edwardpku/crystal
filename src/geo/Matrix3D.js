@@ -8,6 +8,7 @@ window.crystal = window.crystal || {};
 
 (function(crystal) {
     var EPSILON = 0.01;	
+	var Vector3D = crystal.Vector3D;
 	
     function Matrix3D(v) {
         if (v && v.length == 16) {
@@ -23,10 +24,11 @@ window.crystal = window.crystal || {};
     
     Matrix3D.prototype.identity = function() {
     	for (var i = 0; i < 16; i ++) {
-    		this.v[i] = (i == 0 || i == 5 || i == 10 || i == 15) ? 1 : 0;
+            this.v[i] = (i == 0 || i == 5 || i == 10 || i == 15) ? 1 : 0;
     	}
     };
     
+    // m: Array
     Matrix.prototype.equal = function(m) {
     	for (var i = 0; i < 16; i ++) {
     		if (Math.abs(this.v[i] - m.v[i]) >= EPSILON) {
@@ -124,6 +126,7 @@ window.crystal = window.crystal || {};
 
     };
     
+    // v: crystal.Vector3D
     Matrix3D.prototype.transformVector = function(v) {
     	var x = v.x, y = v.y, z = v.z, w = v.w;
     	
@@ -135,6 +138,7 @@ window.crystal = window.crystal || {};
     	return new Vector3D(x0, y0, z0, w0);
     };
     
+    // vs: Array of crystal.Vector3D
     Matrix3D.prototype.transformVectors = function(vs) {
     	var n = vs.length;
     	var result = [];
