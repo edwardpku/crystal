@@ -94,8 +94,9 @@ window.crystal = window.crystal || {};
     	this.z = -this.z;
     };
     
+    // a: Vector3D  b: Vector3D
     Vector3D.angleBetween = function(a, b) {
-    	
+    	return Math.acos(a.dotProduct(b) / (a.length() * b.length()));
     };
     
     crystal.Vector3D = Vector3D;
