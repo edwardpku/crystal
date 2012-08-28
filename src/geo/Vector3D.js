@@ -7,7 +7,7 @@
 
 window.crystal = window.crystal || {};
 
-(function(crystal) {
+(function(crystal) {	
     function Vector3D(x, y, z, w) {
         this.x = x || 0;
         this.y = y || 0;
@@ -98,6 +98,10 @@ window.crystal = window.crystal || {};
     Vector3D.angleBetween = function(a, b) {
     	return Math.acos(a.dotProduct(b) / (a.length() * b.length()));
     };
+    
+    Vector3D.X_AXIS = new Vector3D(1, 0, 0);
+    Vector3D.Y_AXIS = new Vector3D(0, 1, 0);
+    Vector3D.Z_AXIS = new Vector3D(0, 0, 1);
     
     crystal.Vector3D = Vector3D;
 })(crystal);
