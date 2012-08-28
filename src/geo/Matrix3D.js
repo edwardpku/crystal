@@ -1,7 +1,7 @@
 /**
  * @author: kexin
  * @date: 2012.8.10
- * @see flash.geo.Matrix3D of Actionscript 3, Adobe
+ * @see flash.geom.Matrix3D of Actionscript 3, Adobe
  */
 
 window.crystal = window.crystal || {};
