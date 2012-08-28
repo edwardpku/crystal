@@ -1,7 +1,7 @@
 /**
  * @author: kexin
  * @date: 2012.8.7
- * @see flash.geo.Point of Actionscript 3, Adobe
+ * @see flash.geom.Point of Actionscript 3, Adobe
  * 
  */
  
