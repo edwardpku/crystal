@@ -8,6 +8,9 @@ window.crystal = window.crystal || {};
 
 (function(crystal) {
     var Matrix3D = crystal.Matrix3D;
+    var Camera = crystal.Camera;
+    var Object3D = crystal.Object3D;
+    
     
     function Scene3D() {
         this.world = [];
