@@ -12,11 +12,11 @@ window.crystal = window.crystal || {};
         this.x = x || 0;
         this.y = y || 0;
         this.z = z || 0;
-        this.w = w || 0;
+        this.w = w || 1;
     }
 	
     Vector3D.prototype.clone = function() {
-        return new Vector3D(this.x, this.y, this.z);
+        return new Vector3D(this.x, this.y, this.z, this.w);
     };
     
     // v: Vector3D
@@ -24,10 +24,20 @@ window.crystal = window.crystal || {};
     	return this.x == v.x && this.y == v.y && this.z == v.z;
     };
     
+    Vector3D.prototype.add = function(v) {
+    	return new Vector3D(this.x + v.x, this.y + v.y, this.z + v.z);
+    };
+    
+    Vector3D.prototype.subtract = function(v) {
+        return new Vector3D(this.x - v.x, this.y - v.y, this.z - v.z);
+    };
+    
+    // v: Vector3D
     Vector3D.prototype.dotProduct = function(v) {
     	return this.x * v.x + this.y * v.y + this.z * v.z;
     };
     
+    // v: Vector3D
     Vector3D.prototype.crossProduct = function(v) {
     	
     };
@@ -36,42 +46,42 @@ window.crystal = window.crystal || {};
     	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);	
     };
     
-    Vector3D.prototype.translate = function(dx, dy, dz) {
-    	this.x += dx;
-    	this.y += dy;
-    	this.z += dz;
+    // v: Vector3D
+    Vector3D.prototype.incrementBy = function(v) {
+        this.x += v.x;
+        this.y += v.y;
+        this.z += v.z;
     };
     
-    Vector3D.prototype.scale = function(sx, sy, sz) {
-    	this.x = this.x * sx;
-    	this.y = this.y * sx;
-    	this.z = this.z * sx;
+    // v: Vector3D
+    Vector3D.prototype.decrementBy = function(v) {
+    	this.x -= v.x;
+    	this.y -= v.y;
+    	this.z -= v.z;
     };
     
-    Vector3D.prototype.rotate = function() {
-    	
+    // v: Vector3D
+    Vector3D.prototype.scaleBy = function(v) {
+    	this.x = this.x * v.x;
+    	this.y = this.y * v.y;
+    	this.z = this.z * v.z;
     };
     
     Vector3D.prototype.project = function() {
     	if (this.w == 0) {
-    		return;
+            return;
     	}
+    	
     	this.x = this.x / this.w;
     	this.y = this.y / this.w;
     	this.z = this.z / this.w;
     };
     
     Vector3D.prototype.normalize = function() {
-    	var l = this.length;
+    	var l = this.length();
     	this.x /= l;
     	this.y /= l;
     	this.z /= l;
-    };
-    
-    Vector3D.prototype.scaleBy = function(s) {
-    	this.x = this.x * s;
-    	this.y = this.y * s;
-    	this.z = this.z * s;
     };
     
     Vector3D.prototype.toString = function() {
