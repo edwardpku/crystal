@@ -1,7 +1,7 @@
 /**
  * @author: kexin
  * @date: 2012.8.7
- * @see flash.geo.Rectangle of Actionscript 3, Adobe
+ * @see flash.geom.Rectangle of Actionscript 3, Adobe
  * 
  */
 
